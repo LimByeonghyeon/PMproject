@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pm.spring.doc">
+	<select id="selectAll" resultType="DocDTO">
+		select doc_no, FK_WRITER_EMPNO, DOC_SUBJECT, DOC_CONTENTS,  
+		D_DAY, ICON, WRITEDAY, ORGFILENAME, FILENAME, FILESIZE 
+		 from tbl_documents order by doc_no desc
+	</select>
+	<select id="select" resultType="DocDTO">
+		select D.doc_no, D.FK_WRITER_EMPNO, D.DOC_SUBJECT, D.DOC_CONTENTS, D.D_DAY, D.ICON, D.writeday, D.ORGFILENAME, D.FILENAME, D.FILESIZE, D.attachedfile, E.name from tbl_documents D 
+		 join tbl_employees E ON D.fk_writer_empno = E.empno
+		 where D.doc_no = #{doc_no}
+	</select>
+	<insert id="insert" parameterType="DocDTO">
+		insert into tbl_documents (doc_no, fk_writer_empno, doc_subject, doc_contents, 
+		D_day, icon, writeday, orgFilename, fileName, fileSize, attachedfile) 
+		 values(#{doc_no},#{fk_writer_empno},#{doc_subject},#{doc_contents},sysdate, 
+		 #{icon, jdbcType=VARCHAR},sysdate,#{orgFilename},#{fileName}, 
+		 #{fileSize, jdbcType=VARCHAR},#{attachedfile, jdbcType=VARCHAR})
+	</insert>
+	<update id="update" parameterType="DocDTO">
+		update tbl_documents set doc_subject=#{doc_subject}, doc_contents=#{doc_contents}, 
+		attachedfile=#{attachedfile, jdbcType=VARCHAR} 
+		 where doc_no=#{doc_no}
+	</update>
+	<delete id="delete" parameterType="DocDTO">
+		delete from tbl_documents where doc_no=#{doc_no}
+	</delete>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pm.spring.emp">
+	<select id="selectAll" resultType="empDTO">
+		
+	</select>
+	<select id="select" resultType="empDTO">
+		
+	</select>
+	<insert id="insert" parameterType="empDTO">
+		
+	</insert>
+	<update id="update" parameterType="empDTO">
+		
+	</update>
+	<delete id="delete" parameterType="empDTO">
+		
+	</delete>
+</mapper>
