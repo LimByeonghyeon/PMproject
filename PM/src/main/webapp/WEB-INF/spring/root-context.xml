@@ -20,7 +20,8 @@
 		base-package="pm.spring.emp"></context:component-scan>
 	<bean class="com.zaxxer.hikari.HikariDataSource" id="hikariDataSource" destroy-method="close">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+		<!-- 클라우드 -->
+		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@icnyipg43d781uet_high?TNS_ADMIN=./src/main/resources/Wallet/" />
 		<property name="username" value="ezen_PM" />
 		<property name="password" value="1234" />
 	</bean>	
