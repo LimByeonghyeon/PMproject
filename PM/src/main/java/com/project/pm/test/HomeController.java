@@ -1,4 +1,4 @@
-package pm.spring.test;
+package com.project.pm.test;
 
 import java.text.DateFormat;
 import java.util.Date;
