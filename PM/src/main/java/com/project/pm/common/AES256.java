@@ -9,8 +9,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.tomcat.util.codec.binary.Base64;
-
+import org.apache.commons.codec.binary.Base64;
 
 //=== #43. 양방향 암호화 알고리즘인 AES256 암호화를 지원하는 클래스 생성하기 
 //(기본생성자가 없으므로 @Componet 를 쓰면 오류가 발생한다.

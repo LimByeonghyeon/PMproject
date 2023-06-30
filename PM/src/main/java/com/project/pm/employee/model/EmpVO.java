@@ -27,5 +27,8 @@ public class EmpVO {
 	private String introduce; // 자기소개
 	private String status; // 재직여부를 나타내는 컬럼
 	private String profile_color; // 프로필 색상
+	
+	private String gender; // 성별 (오라클에서 func_gender()로 구해옴)
+	private String deptname; // 부서명
 
 }

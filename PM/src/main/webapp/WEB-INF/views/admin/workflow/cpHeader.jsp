@@ -26,8 +26,8 @@ a:active {text-decoration: none; color: #cccccc;}
 </style>    
     
 <div style="display: flex; padding-top: 35px; padding-left: 40px; padding-bottom: 35px;]">
-	 <span><a class="mylink" href="javascript:location.href='<%= request.getContextPath()%>/workflow.yolo'"style="color: black; font-size: 27pt; font-weight: bold; padding-right: 20px;">내 문서함</a></span>
-	 <span><a class="link" href="javascript:location.href='<%= request.getContextPath()%>/cpWorkflow.yolo'" style=" font-size: 27pt; font-weight: bold;">회사 문서함</a></span>
+	 <span><a class="mylink" href="javascript:location.href='<%= request.getContextPath()%>/workflow.pm'"style="color: black; font-size: 27pt; font-weight: bold; padding-right: 20px;">내 문서함</a></span>
+	 <span><a class="link" href="javascript:location.href='<%= request.getContextPath()%>/cpWorkflow.pm'" style=" font-size: 27pt; font-weight: bold;">회사 문서함</a></span>
 
 </div>
 

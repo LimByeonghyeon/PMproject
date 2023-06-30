@@ -272,7 +272,7 @@
 		on fk_writer_empno = empno
 		where fK_writer_empno =#{empno} and  doc_no =#{doc_no} -->
 		
-		select distinct fk_writer_empno, doc_no, doc_subject, doc_contents, writeday, modificationday, icon, filename, orgfilename,filesize, d_day, name, position,fk_deptno,profile_color, end_doc
+		select distinct fk_writer_empno, do_c_no, doc_subject, doc_contents, writeday, modificationday, icon, filename, orgfilename,filesize, d_day, name, position,fk_deptno,profile_color, end_doc
 		from
 		(
 		select distinct fk_writer_empno, doc_no, doc_subject, doc_contents, writeday, modificationday, icon, filename, orgfilename,filesize, d_day, name, position,fk_deptno,profile_color

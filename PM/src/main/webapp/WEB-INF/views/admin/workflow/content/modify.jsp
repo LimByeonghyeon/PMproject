@@ -274,7 +274,7 @@ textarea:focus {
 		<div class="row" style="padding: 0px;">
 			
 				<div class="col-7 content">
-					<img src="<%= ctxPath%>/image/jihee/${requestScope.icon}"> 
+					<img src="<%= ctxPath%>/image/workflow/${requestScope.icon}"> 
 					<span id="fontSubject">${requestScope.subject}</span>	
 					<div id="information">${requestScope.information}</div>
 					

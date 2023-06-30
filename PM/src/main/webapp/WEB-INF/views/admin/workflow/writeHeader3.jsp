@@ -31,7 +31,7 @@ a:active {text-decoration: none; color: #cccccc;}
 			
 		  const frm = document.modifyFrm;
           frm.method = "POST";
-          frm.action = "<%= ctxPath%>/workflow/modifyEnd.yolo";
+          frm.action = "<%= ctxPath%>/workflow/modifyEnd.pm";
           frm.submit();
 		
 	}
@@ -39,8 +39,8 @@ a:active {text-decoration: none; color: #cccccc;}
 </script> 
 
 <div style="display: flex; padding-top: 30px; padding-left: 30px; padding-bottom: 40px;]" class="border-bottom">
-	 <span ><a class="mylink" href="javascript:location.href='<%= request.getContextPath()%>/workflow.yolo'" style="color: #404040; font-size: 23pt; font-weight: bold; padding-right: 20px;"><</a></span>
-	 <span style="color:#404040; font-size: 23pt; font-weight: bold;" onclick="javascript:location.href='<%= request.getContextPath()%>/workflow.yolo'">수정하기</span>
+	 <span ><a class="mylink" href="javascript:location.href='<%= request.getContextPath()%>/workflow.pm'" style="color: #404040; font-size: 23pt; font-weight: bold; padding-right: 20px;"><</a></span>
+	 <span style="color:#404040; font-size: 23pt; font-weight: bold;" onclick="javascript:location.href='<%= request.getContextPath()%>/workflow.pm'">수정하기</span>
 	<button type="button" class="headerBtn" onclick="goModify();">
 		<i class="bi bi-send" style="margin-right: 10px;"></i>
 		 보내기

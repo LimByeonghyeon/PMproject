@@ -3,21 +3,18 @@ package com.project.pm.workflow.controller;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.*;
-import java.util.Map.Entry;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import javax.annotation.Resource;
-import javax.print.DocFlavor.STRING;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.poi.ss.formula.functions.Vlookup;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,11 +31,9 @@ import com.project.pm.workflow.service.WorkflowService;
 @Controller
 public class WorkflowController {
 	
-	//service 주입
 	@Autowired
 	private WorkflowService service;
 	
-	//파일업로드 및 다운로드를 해주는 FileManager 클래스 의존객체 주입하기(DI : Dependency Injection) ===  
 	@Autowired
 	private FileManager fileManager;
 	
@@ -86,7 +81,7 @@ public class WorkflowController {
 		return "workflow/content/document.workadmin";
 	}
 	
-	@RequestMapping(value = "/cpworkflow.yolo")
+	@RequestMapping(value = "/cpworkflow.pm")
 	public String viewCpWorkflow(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
@@ -132,7 +127,7 @@ public class WorkflowController {
 	
 	//문서 자세히 보기 ajax
 	@ResponseBody
-	@RequestMapping(value = "/workflow/documentDetail.yolo")
+	@RequestMapping(value = "/workflow/documentDetail.pm")
 	public String documentDetail(HttpServletRequest request) {
 		
 		String empno = request.getParameter("emp_no");
@@ -345,7 +340,7 @@ public class WorkflowController {
 	
 	//결제라인 알아오는 modal(모달)
 	@ResponseBody
-	@RequestMapping(value = "/workflow/modalApproval.yolo")
+	@RequestMapping(value = "/workflow/modalApproval.pm")
 	public String getApprovalModal(HttpServletRequest request) {
 		
 		
@@ -466,7 +461,7 @@ public class WorkflowController {
 	
 	//문서 승인,반려 ajax
 	@ResponseBody
-	@RequestMapping(value = "/workflow/approval.yolo")
+	@RequestMapping(value = "/workflow/approval.pm")
 	public String approvalDu(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
@@ -511,13 +506,13 @@ public class WorkflowController {
 	}
 	
 	
-	@RequestMapping(value = "/cpWorkflow.yolo")
+	@RequestMapping(value = "/cpWorkflow.pm")
 	public String viewCpWorkflow() {
 		
 		return "workflow/content/cpDocument.admin";
 	}
 	
-	@RequestMapping(value = "/workflow/selectWrite.yolo")
+	@RequestMapping(value = "/workflow/selectWrite.pm")
 	public String selectWriteWorkflow() {
 		
 		
@@ -525,7 +520,7 @@ public class WorkflowController {
 	}
 	
 	//글 작성하기 폼페이지 요청
-	@RequestMapping(value = "/workflow/write.yolo")
+	@RequestMapping(value = "/workflow/write.pm")
 	public String writeWorkflow( HttpServletRequest request) {
 		
 		String subject = request.getParameter("subject");
@@ -583,12 +578,12 @@ public class WorkflowController {
 	}
 	
 	// 글작성하기 완료 요청
-	@RequestMapping(value = "workflow/writeEnd.yolo", method= {RequestMethod.POST})
+	@RequestMapping(value = "workflow/writeEnd.pm", method= {RequestMethod.POST})
 	public ModelAndView addAlarm_writeEnd(Map<String, String> paraMap, ModelAndView mav, MultipartHttpServletRequest mrequest, DocumentVO docvo) {
 	/*
 	    form 태그의 name 명과  BoardVO 의 필드명이 같다라면 
 	    request.getParameter("form 태그의 name명"); 을 사용하지 않더라도
-	        자동적으로 documentVO docVO 에 set 되어진다.
+	        자동적으로 DocumentVO docVO 에 set 되어진다.
 	*/	
 		
 	/*
@@ -628,7 +623,7 @@ public class WorkflowController {
 	//		System.out.println("~~~~ 확인용 webapp 의 절대경로 => " + root);
 	//		~~~~ 확인용 webapp 의 절대경로 => C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
  
-			String path =  "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files"+File.separator+"workflow";
+			String path =  "C:\\Users\\sist\\git\\PM\\src\\main\\webapp\\files"+File.separator+"workflow";
 			/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
 		              운영체제가 Windows 이라면 File.separator 는  "\" 이고,
 		              운영체제가 UNIX, Linux, 매킨토시(맥) 이라면  File.separator 는 "/" 이다. 
@@ -722,7 +717,7 @@ public class WorkflowController {
 		
 		
 		if( !(Integer.toString(doc_no)==null) ) {
-			mav.setViewName("redirect:/workflow.yolo");
+			mav.setViewName("redirect:/workflow.pm");
 		}
 		
 		List<String> alarmList = new ArrayList<String>();
@@ -744,7 +739,7 @@ public class WorkflowController {
 		
 		// === AOP After Advice를 사용하기 === //
 		paraMap.put("fk_recipientno", fk_empno ); // 받는사람 (여러명일때는 ,으로 구분된 str)
-		paraMap.put("url", "/workflow.yolo?doc_no=");
+		paraMap.put("url", "/workflow.pm?doc_no=");
 		paraMap.put("url2", Integer.toString(doc_no) ); // 연결되는 pknum등...  (여러개일때는 ,으로 구분된 str)(대신 받는 사람 수랑 같아야됨)
 		paraMap.put("alarm_content", loginuser.getName()+"님이 기안문서를 작성하였습니다." );
 		paraMap.put("alarm_type", "3" );
@@ -754,7 +749,7 @@ public class WorkflowController {
 	}
 	
 	// 수정하기
-	@RequestMapping(value = "/workflow/modify.yolo")
+	@RequestMapping(value = "/workflow/modify.pm")
 	public String modifyWorkflow(HttpServletRequest request, DocumentVO docvo) {
 
 		HttpSession session = request.getSession();
@@ -828,7 +823,7 @@ public class WorkflowController {
 		else if(!(empno.equals(writer_empno))) {
 			
 			String message = "본인이 쓴 글이 아니면 수정이 불가합니다 ";
-			String loc = request.getContextPath() + "/workflow.yolo";
+			String loc = request.getContextPath() + "/workflow.pm";
 			request.setAttribute("message", message);
 			request.setAttribute("loc", loc);
 			
@@ -837,7 +832,7 @@ public class WorkflowController {
 		
 		else {
 			String message = "이미 결재가 시작되어 수정이 불가합니다.";
-			String loc = request.getContextPath() + "/workflow.yolo";
+			String loc = request.getContextPath() + "/workflow.pm";
 			request.setAttribute("message", message);
 			request.setAttribute("loc", loc);
 			return "/msg";
@@ -850,7 +845,7 @@ public class WorkflowController {
 	}
 	
 	// 수정하기 종료
-		@RequestMapping(value = "/workflow/modifyEnd.yolo")
+		@RequestMapping(value = "/workflow/modifyEnd.pm")
 		public String modifyWorkflowEnd(HttpServletRequest request, DocumentVO docvo) {
 			
 			String contents = docvo.getDoc_contents();
@@ -867,11 +862,11 @@ public class WorkflowController {
 			
 			
 			if( n == 1 ) {
-				return "redirect:/workflow.yolo";
+				return "redirect:/workflow.pm";
 			}
 			else {
 				String message = "수정 실패했습니다.";
-				String loc = request.getContextPath() + "/workflow.yolo";
+				String loc = request.getContextPath() + "/workflow.pm";
 				request.setAttribute("message", message);
 				request.setAttribute("loc", loc);
 				
@@ -883,7 +878,7 @@ public class WorkflowController {
 	
 	//내문서함 글 목록 보여주기 (ajax)
 	@ResponseBody
-	@RequestMapping(value = "/workflow/myDocument_dm.yolo", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
+	@RequestMapping(value = "/workflow/myDocument_dm.pm", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
 	public String myDcument_dm(HttpServletRequest request ) {
 		
 
@@ -991,7 +986,7 @@ public class WorkflowController {
 		
 	//진행중인 문서함 글 목록 보여주기 (ajax)
 	@ResponseBody
-	@RequestMapping(value = "/workflow/watingDm.yolo")
+	@RequestMapping(value = "/workflow/watingDm.pm")
 	public String watingDm(HttpServletRequest request, EmpVO empvo) {
 		
 
@@ -1182,7 +1177,7 @@ public class WorkflowController {
 	
 	//완료된 문서함 글 목록 보여주기 (ajax)
 	@ResponseBody
-	@RequestMapping(value = "/workflow/completeDm.yolo")
+	@RequestMapping(value = "/workflow/completeDm.pm")
 	public String completeDm(HttpServletRequest request, EmpVO empvo) {
 		
 
@@ -1326,7 +1321,7 @@ public class WorkflowController {
 	
 	// === #132. totalPage 수를 알아오기(Ajax 처리)=== //
 		@ResponseBody
-		@RequestMapping(value = "/getTotalPage.yolo", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
+		@RequestMapping(value = "/getTotalPage.pm", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
 		public String getTotalPage(HttpServletRequest request) {
 			
 		
@@ -1357,7 +1352,7 @@ public class WorkflowController {
 		
 // === #132. totalPage 수를 알아오기(Ajax 처리)=== //
 		@ResponseBody
-		@RequestMapping(value = "/getTotalPageCom.yolo", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
+		@RequestMapping(value = "/getTotalPageCom.pm", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
 		public String getTotalPagecom(HttpServletRequest request) {
 			
 			String sizePerPage = request.getParameter("sizePerPage");
@@ -1384,7 +1379,7 @@ public class WorkflowController {
 		
 		// === #132. totalPage 수를 알아오기(Ajax 처리)=== //
 		@ResponseBody
-		@RequestMapping(value = "/getTotalPagemy.yolo", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
+		@RequestMapping(value = "/getTotalPagemy.pm", method = {RequestMethod.GET }, produces = "text/plain;charset=UTF-8")
 		public String getTotalPagemy(HttpServletRequest request) {
 			
 			int sizePerPage =Integer.parseInt(request.getParameter("sizePerPage"));
@@ -1419,7 +1414,7 @@ public class WorkflowController {
 				
 				
 		// === #163. 첨부파일 다운로드  === //	
-		@RequestMapping(value = "/download.yolo")
+		@RequestMapping(value = "/download.pm")
 		public void requiredLogin_download(HttpServletRequest request, HttpServletResponse response) {
 			
 			String doc_no= request.getParameter("doc_no");
@@ -1516,8 +1511,5 @@ public class WorkflowController {
 			}
 		
 		}// end of requiredLogin_download
-		
 
-		
-		
 }

@@ -6,6 +6,7 @@ import java.util.Map;
 import com.project.pm.workflow.model.DocumentVO;
 
 public interface WorkflowService {
+	
 	//참조할 사람 목록 알아오기
 		List<Map<String, String>> appList(Map<String, String> paraMap);
 
@@ -61,4 +62,6 @@ public interface WorkflowService {
 
 		//히스토리 가져오기
 		List<Map<String, String>> getHistory(String doc_no);
+		
+
 }

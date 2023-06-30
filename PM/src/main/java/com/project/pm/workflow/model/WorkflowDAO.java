@@ -3,8 +3,6 @@ package com.project.pm.workflow.model;
 import java.util.List;
 import java.util.Map;
 
-import com.project.pm.workflow.model.DocumentVO;
-
 public interface WorkflowDAO {
 	//참조할 사람 목록 알아오기
 		List<Map<String, String>> appList(Map<String, String> paraMap);
@@ -81,4 +79,6 @@ public interface WorkflowDAO {
 
 		//내 레벨 알아오기
 		int getMylevelno(Map<String, String> paraMap);
+	
+
 }

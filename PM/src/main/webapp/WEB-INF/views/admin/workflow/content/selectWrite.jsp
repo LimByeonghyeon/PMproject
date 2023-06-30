@@ -174,7 +174,7 @@ div#child2 {
 <form name="selectFrm">
 		<div class="card" onclick="goWrite()" id="child" style="margin-left: 45px;">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/tem.png">
+				<img src="<%= ctxPath%>/image/workflow/tem.png">
 				<input type="hidden" name="icon" value="tem.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -203,7 +203,7 @@ div#child2 {
 <form name="selectFrm2">	
 		<div class="card" onclick="goWrite2()" id="child">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/clip.png">
+				<img src="<%= ctxPath%>/image/workflow/clip.png">
 				<input type="hidden" name="icon" value="clip.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -228,7 +228,7 @@ div#child2 {
 <form name="selectFrm3">	
 		<div class="card" onclick="goWrite3()" id="child">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/key.png">
+				<img src="<%= ctxPath%>/image/workflow/key.png">
 				<input type="hidden" name="icon" value="key.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -250,7 +250,7 @@ div#child2 {
 <form name="selectFrm4">	
 		<div class="card" onclick="goWrite4()" id="child">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/food.png">
+				<img src="<%= ctxPath%>/image/workflow/food.png">
 				<input type="hidden" name="icon" value="food.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -272,7 +272,7 @@ div#child2 {
 <form name="selectFrm5">	
 		<div class="card" onclick="goWrite5()" id="child">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/paper.png">
+				<img src="<%= ctxPath%>/image/workflow/paper.png">
 				<input type="hidden" name="icon" value="paper.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -294,7 +294,7 @@ div#child2 {
 <form name="selectFrm6">	
 		<div class="card" onclick="goWrite6()" id="child2" style="margin-left: 45px;">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/board.png">
+				<img src="<%= ctxPath%>/image/workflow/board.png">
 				<input type="hidden" name="icon" value="board.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -312,7 +312,7 @@ div#child2 {
 <form name="selectFrm7">
 		<div class="card" onclick="goWrite7()" id="child2">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/star.png">
+				<img src="<%= ctxPath%>/image/workflow/star.png">
 				<input type="hidden" name="icon" value="star.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -330,7 +330,7 @@ div#child2 {
 <form name="selectFrm8">	
 		<div class="card" onclick="goWrite8()" id="child2">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/bag.png">
+				<img src="<%= ctxPath%>/image/workflow/bag.png">
 				<input type="hidden" name="icon" value="bag.png" readonly />
 			</div>
 			<div id="fontSubject">
@@ -348,7 +348,7 @@ div#child2 {
 <form name="selectFrm9">	
 		<div class="card" onclick="goWrite9()" id="child2">
 			<div class="icon">
-				<img src="<%= ctxPath%>/image/jihee/receipt.png">
+				<img src="<%= ctxPath%>/image/workflow/receipt.png">
 				<input type="hidden" name="icon" value="receipt.png" readonly />
 			</div>
 			<div id="fontSubject">

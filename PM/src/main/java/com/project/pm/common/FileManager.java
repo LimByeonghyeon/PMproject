@@ -1,5 +1,4 @@
 package com.project.pm.common;
-
 import java.awt.image.BufferedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.io.*;
@@ -271,6 +270,4 @@ public class FileManager {
 	      
 	      return newFilename;
 	 }
-	
-	
 }
