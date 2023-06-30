@@ -40,7 +40,7 @@
    <servlet-mapping>
       <servlet-name>appServlet</servlet-name>
       <!-- === #13. URL 패턴에서 확장자 .action 인 것으로 요청을 하면 appServlet 서블릿이 받아서 처리를 해준다. === --> 
-      <url-pattern>*.yolo</url-pattern>
+      <url-pattern>*.pm</url-pattern>
    </servlet-mapping>
    
    <!-- === #14. POST 방식으로 요청시 데이터 인코딩처리(UTF-8)를 위한 필터추가 -->
@@ -60,7 +60,7 @@
     
     <!--  ===== #14. 시작 웹페이지 등록하기 ===== -->
    <welcome-file-list>
-       <welcome-file>login.yolo</welcome-file>
+       <welcome-file>login.pm</welcome-file>
    </welcome-file-list>
 
 </web-app>
