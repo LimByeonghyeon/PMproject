@@ -83,7 +83,7 @@ public class WorkflowController {
 		request.setAttribute("myTotalCnt", myTotalCnt );
 						
 				
-		return "jihee/content/document.workadmin";
+		return "workflow/content/document.workadmin";
 	}
 	
 	@RequestMapping(value = "/cpworkflow.yolo")
@@ -127,7 +127,7 @@ public class WorkflowController {
 		request.setAttribute("myTotalCnt", myTotalCnt );
 						
 				
-		return "jihee/content/cpDocument.workadmin";
+		return "workflow/content/cpDocument.workadmin";
 	}
 	
 	//문서 자세히 보기 ajax
@@ -514,14 +514,14 @@ public class WorkflowController {
 	@RequestMapping(value = "/cpWorkflow.yolo")
 	public String viewCpWorkflow() {
 		
-		return "jihee/content/cpDocument.admin";
+		return "workflow/content/cpDocument.admin";
 	}
 	
 	@RequestMapping(value = "/workflow/selectWrite.yolo")
 	public String selectWriteWorkflow() {
 		
 		
-		return "jihee/content/selectWrite.admin";
+		return "workflow/content/selectWrite.admin";
 	}
 	
 	//글 작성하기 폼페이지 요청
@@ -579,7 +579,7 @@ public class WorkflowController {
 		
 		}
 
-		return "jihee/content/write.admin";
+		return "workflow/content/write.admin";
 	}
 	
 	// 글작성하기 완료 요청
@@ -821,7 +821,7 @@ public class WorkflowController {
 			request.setAttribute("name", name);
 			
 			
-			return "jihee/content/modify.admin";
+			return "workflow/content/modify.admin";
 		
 		}
 		
