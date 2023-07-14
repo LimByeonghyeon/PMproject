@@ -82,7 +82,7 @@ div#child2 {
 		
 		  const frm = document.selectFrm;
           frm.method = "POST";
-          frm.action = "<%= ctxPath%>/workflow/write.yolo";
+          frm.action = "<%= ctxPath%>/workflow/write.pm";
           frm.submit();
 		
 		
@@ -92,7 +92,7 @@ div#child2 {
 		
 		const frm = document.selectFrm2;
         /* frm.method = "POST"; */
-        frm.action = "<%= ctxPath%>/workflow/write.yolo";
+        frm.action = "<%= ctxPath%>/workflow/write.pm";
         frm.submit();
 		
 		
@@ -102,7 +102,7 @@ div#child2 {
 			
 			const frm = document.selectFrm3;
 	        /* frm.method = "POST"; */
-	        frm.action = "<%= ctxPath%>/workflow/write.yolo";
+	        frm.action = "<%= ctxPath%>/workflow/write.pm";
 	        frm.submit();
 			
 			
@@ -112,7 +112,7 @@ div#child2 {
 		
 		const frm = document.selectFrm4;
 	    /* frm.method = "POST"; */
-	    frm.action = "<%= ctxPath%>/workflow/write.yolo";
+	    frm.action = "<%= ctxPath%>/workflow/write.pm";
 	    frm.submit();
 		
 		
@@ -122,7 +122,7 @@ div#child2 {
 			
 			const frm = document.selectFrm5;
 		    /* frm.method = "POST"; */
-		    frm.action = "<%= ctxPath%>/workflow/write.yolo";
+		    frm.action = "<%= ctxPath%>/workflow/write.pm";
 		    frm.submit();
 			
 			
@@ -132,7 +132,7 @@ div#child2 {
 		
 		const frm = document.selectFrm6;
 	    /* frm.method = "POST"; */
-	    frm.action = "<%= ctxPath%>/workflow/write.yolo";
+	    frm.action = "<%= ctxPath%>/workflow/write.pm";
 	    frm.submit();
 		
 		
@@ -142,7 +142,7 @@ div#child2 {
 		
 		const frm = document.selectFrm7;
 	    /* frm.method = "POST"; */
-	    frm.action = "<%= ctxPath%>/workflow/write.yolo";
+	    frm.action = "<%= ctxPath%>/workflow/write.pm";
 	    frm.submit();
 		
 		
@@ -152,7 +152,7 @@ div#child2 {
 		
 		const frm = document.selectFrm8;
 	    /* frm.method = "POST"; */
-	    frm.action = "<%= ctxPath%>/workflow/write.yolo";
+	    frm.action = "<%= ctxPath%>/workflow/write.pm";
 	    frm.submit();
 		
 		
@@ -162,7 +162,7 @@ div#child2 {
 		
 		const frm = document.selectFrm9;
 	    /* frm.method = "POST"; */
-	    frm.action = "<%= ctxPath%>/workflow/write.yolo";
+	    frm.action = "<%= ctxPath%>/workflow/write.pm";
 	    frm.submit();
 		
 		

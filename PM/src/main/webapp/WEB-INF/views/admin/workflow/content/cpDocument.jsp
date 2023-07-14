@@ -507,7 +507,7 @@
 		
 		 const frm = document.modifyFrm;
          frm.method = "POST";
-         frm.action = "<%= request.getContextPath()%>/workflow/modify.yolo";
+         frm.action = "<%= request.getContextPath()%>/workflow/modify.pm";
          frm.submit();
 		
 		
@@ -516,7 +516,7 @@
 	function goApproval(approval,doc_no,levelno) {
 		
 		$.ajax({
-			url:"<%= request.getContextPath()%>/workflow/approval.yolo",
+			url:"<%= request.getContextPath()%>/workflow/approval.pm",
 			data :{"approval":approval,
 				   "doc_no": doc_no,
 				   "levelno":levelno},
@@ -569,7 +569,7 @@
 	   
 	
 	  $.ajax({
-		  url:"<%= request.getContextPath()%>/workflow/documentDetail.yolo",
+		  url:"<%= request.getContextPath()%>/workflow/documentDetail.pm",
 		  data:{"doc_no":doc_no,
 			  	"emp_no":emp_no},
 		  dataType:"JSON",
@@ -653,7 +653,7 @@
 						"<div class='collapse' id='collapseExample'>"+
 						 "<div class='' style='margin-left: 10px;'>";
 						 if(json.orgfilename != null){
-						  html+= "<a href='<%= request.getContextPath()%>/download.yolo?doc_no="+json.doc_no+"'>"+json.orgfilename+"</a>"+      
+						  html+= "<a href='<%= request.getContextPath()%>/download.pm?doc_no="+json.doc_no+"'>"+json.orgfilename+"</a>"+      
 						  "<br><img src='<%= ctxPath%>/files/workflow/"+json.filename+"' style='width=100px; height=100px;'>";
 						 }		  
 						 else {
@@ -711,7 +711,7 @@
 		  
 	  
 		  $.ajax({
-			  url:"<%= request.getContextPath()%>/workflow/modalApproval.yolo",
+			  url:"<%= request.getContextPath()%>/workflow/modalApproval.pm",
 			  data:{"doc_no":doc_no,
 				  	"emp_no":emp_no},
 			  dataType:"JSON",
@@ -806,7 +806,7 @@
   function myDocument(currentShowPageNo) {
 	  
 	  $.ajax({
-		  url:"<%= request.getContextPath()%>/workflow/myDocument_dm.yolo",
+		  url:"<%= request.getContextPath()%>/workflow/myDocument_dm.pm",
 		  data:{"currentShowPageNo":currentShowPageNo},
 		  dataType:"JSON",
 		  success:function(json){
@@ -909,7 +909,7 @@
 	
 	  
 	  $.ajax({
-		  url:"<%= request.getContextPath()%>/workflow/watingDm.yolo",
+		  url:"<%= request.getContextPath()%>/workflow/watingDm.pm",
 		  data:{"currentShowPageNo":currentShowPageNo},
 		  dataType:"JSON",
 		  success:function(json){
@@ -1016,7 +1016,7 @@
    function completeDm(currentShowPageNo) {
 	  
 	   $.ajax({
-			  url:"<%= request.getContextPath()%>/workflow/completeDm.yolo",
+			  url:"<%= request.getContextPath()%>/workflow/completeDm.pm",
 			  data:{"currentShowPageNo":currentShowPageNo},
 			  dataType:"JSON",
 			  success:function(json){
@@ -1110,7 +1110,7 @@
 
 	   <%-- === 원글에 대한 댓글의 totalPage 수를 알아와야 한다. === --%>
 		  $.ajax({
-			  url:"<%= request.getContextPath()%>/getTotalPage.yolo",
+			  url:"<%= request.getContextPath()%>/getTotalPage.pm",
 			  data:{"sizePerPage":"10"},
 		      type:"GET",
 		      dataType:"JSON",
@@ -1175,7 +1175,7 @@
 
 	   <%-- === 원글에 대한 댓글의 totalPage 수를 알아와야 한다. === --%>
 		  $.ajax({
-			  url:"<%= request.getContextPath()%>/getTotalPageCom.yolo",
+			  url:"<%= request.getContextPath()%>/getTotalPageCom.pm",
 			  data:{"sizePerPage":"10"},
 		      type:"GET",
 		      dataType:"JSON",
@@ -1240,7 +1240,7 @@
 
 	   <%-- === 원글에 대한 댓글의 totalPage 수를 알아와야 한다. === --%>
 		  $.ajax({
-			  url:"<%= request.getContextPath()%>/getTotalPagemy.yolo",
+			  url:"<%= request.getContextPath()%>/getTotalPagemy.pm",
 			  data:{"sizePerPage":"10"},
 		      type:"GET",
 		      dataType:"JSON",

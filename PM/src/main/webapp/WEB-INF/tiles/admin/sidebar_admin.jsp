@@ -587,6 +587,6 @@
 		</div>
 		
 		
-<%-- <%@ include file="../../views/admin/jihyun/alarm/alarmModal.jsp" %> --%>
+<%@ include file="../../views/admin/service/alarm/alarmModal.jsp" %>
 
 

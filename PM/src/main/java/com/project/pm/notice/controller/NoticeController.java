@@ -115,7 +115,7 @@ public class NoticeController {
 //        System.out.println("확인용  webapp 절대경로(실제경로)  : " + root);
           // C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
           // 실제로는 .meta data에 올라간다.
-          String path = "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files"+File.separator+"notice";
+          String path = "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files"+File.separator+"notice";
           /* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
                     운영체제가 Windows 이라면 File.separator 는  "\" 이고,
                     운영체제가 UNIX, Linux, 메킨토시라면  File.separator 는 "/" 이다. 
@@ -558,7 +558,7 @@ public class NoticeController {
 				 System.out.println("root 확인 :" + root);
 				// root 확인 :C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
 				
-				String path =  "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files"+File.separator+"notice";
+				String path =  "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files"+File.separator+"notice";
 								// root + "resources"+File.separator+"files"+File.separator+"massenger";
 				/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
 			            운영체제가 Windows 이라면 File.separator 는  "\" 이고,
@@ -1373,7 +1373,7 @@ public class NoticeController {
 				 System.out.println("root 확인 :" + root);
 				// root 확인 :C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
 				
-				String path =  "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files"+File.separator+"notice";
+				String path =  "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files"+File.separator+"notice";
 								// root + "resources"+File.separator+"files"+File.separator+"massenger";
 				/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
 			            운영체제가 Windows 이라면 File.separator 는  "\" 이고,
@@ -1947,7 +1947,7 @@ public class NoticeController {
 				// System.out.println("root 확인 :" + root);
 				// root 확인 :C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
 				
-				String path =  "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files"+File.separator+"notice";
+				String path =  "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files"+File.separator+"notice";
 								// root + "resources"+File.separator+"files"+File.separator+"massenger";
 				/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
 			            운영체제가 Windows 이라면 File.separator 는  "\" 이고,

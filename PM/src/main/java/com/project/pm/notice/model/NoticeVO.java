@@ -26,6 +26,8 @@ public class NoticeVO {
 	private String fileSize;
 	
 	private MultipartFile attach;
+	
+	public NoticeVO() {}
 
 	public NoticeVO(String notino, String fk_senderno, String fk_deptno, String notiLevel, String writedate,
 			String subject, String content, String readCount, String cmtCount, String status, String fileName,

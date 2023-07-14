@@ -2103,7 +2103,7 @@
 							<div style="font-size: 12px; font-weight:600; color:#556372;">남은연차</div>
 							<div id="div_annual" style="font-size: 20px; color: gray; font-weight:700;"></div>
 						</div>
-					</d{iv>
+					</div>
 				</div>
 			</a>
 			

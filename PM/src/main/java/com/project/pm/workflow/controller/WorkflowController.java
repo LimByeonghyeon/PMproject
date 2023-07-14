@@ -623,7 +623,7 @@ public class WorkflowController {
 	//		System.out.println("~~~~ 확인용 webapp 의 절대경로 => " + root);
 	//		~~~~ 확인용 webapp 의 절대경로 => C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
  
-			String path =  "C:\\Users\\sist\\git\\PM\\src\\main\\webapp\\files"+File.separator+"workflow";
+			String path =  "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files"+File.separator+"workflow";
 			/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
 		              운영체제가 Windows 이라면 File.separator 는  "\" 이고,
 		              운영체제가 UNIX, Linux, 매킨토시(맥) 이라면  File.separator 는 "/" 이다. 
@@ -1469,7 +1469,7 @@ public class WorkflowController {
 					//System.out.println("~~~~ 확인용 webapp 의 절대경로 => " + root);
 					//~~~~ 확인용 webapp 의 절대경로 => C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
 					
-					String path =  "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files"+File.separator+"workflow";
+					String path =  "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files"+File.separator+"workflow";
 					request.setAttribute("path", path );
 					/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
 				              운영체제가 Windows 이라면 File.separator 는  "\" 이고,

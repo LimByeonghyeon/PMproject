@@ -64,12 +64,12 @@ public class EmpController {
 	// 구성원 메인 페이지
 	@RequestMapping(value = "/people.pm")
 	public String people() {
-		return "jangjy/people_admin.admin";
+		return "emp/people_admin.admin";
 	}
 	
 	@RequestMapping(value = "/insight.pm")
 	public String insight() {
-		return "jangjy/insight.admin";
+		return "emp/insight.admin";
 	}
 	
 	@ResponseBody 
@@ -217,7 +217,7 @@ public class EmpController {
 	@RequestMapping(value = "/change_history.pm")
 	public String change_history() {
 
-		return "jangjy/change_history.admin";
+		return "emp/change_history.admin";
 	}
 	
 	// 사용자 한명 상세 정보 (admin)
@@ -233,7 +233,7 @@ public class EmpController {
 		
 		request.setAttribute("employeeMap",employeeMap);
 		
-		return "jangjy/user_detail.admin";
+		return "emp/user_detail.admin";
 	}
 	
 	
@@ -538,8 +538,8 @@ public class EmpController {
 					// root 확인 :C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
 					
 //					String path = root + "resources"+File.separator+"files";
-					String path = "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files\\empFile\\";
-//					String path = "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\image"+"resources"+File.separator+"files";
+					String path = "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files\\empFile\\";
+//					String path = "C:\\Users\\sist\\git\\PM\\src\\main\\webapp\\image"+"resources"+File.separator+"files";
 //					System.out.println("확인용 path : "+ path);
 					// C:\NCS\workspace(final)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Yolo\resources\files
 					/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
@@ -758,7 +758,7 @@ public class EmpController {
 				// root 확인 :C:\NCS\workspace(spring)\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Board\
 				
 //				String path = root + "resources"+File.separator+"files";
-				String path = "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files\\empFile\\";
+				String path = "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files\\empFile\\";
 				
 				/* File.separator 는 운영체제에서 사용하는 폴더와 파일의 구분자이다.
 			            운영체제가 Windows 이라면 File.separator 는  "\" 이고,
@@ -1083,7 +1083,7 @@ public class EmpController {
         HttpSession session = request.getSession();
         String root = session.getServletContext().getRealPath("/"); // 이만큼이 webapp 
 //        String path = root + "resources"+File.separator+"files"+File.separator+"excel";
-        String path = "C:\\Users\\sist\\git\\Yolo\\Yolo\\src\\main\\webapp\\files\\empFile\\";
+        String path = "C:\\spring_workspace\\PM3\\src\\main\\webapp\\files\\empFile\\";
         
         File destFile = new File(path+excelFile.getOriginalFilename());
 //        File destFile = new File("C:\\upload\\"+excelFile.getOriginalFilename());
@@ -1161,7 +1161,7 @@ public class EmpController {
 		int result = dao.updateRetirement(paraMap) ;
 		
 //		return "redirect:userDetail.pm?empno="+paraMap.get("empno");
-		return "jangjy/people_admin.admin";
+		return "emp/people_admin.admin";
 	}
 	
 	

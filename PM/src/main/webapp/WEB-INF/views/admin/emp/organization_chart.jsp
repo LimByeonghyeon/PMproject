@@ -116,10 +116,10 @@ a.current,a.current:hover {
 <div id="peopleContent">
 		<div id="header">
 	        <div id="header_title">
-	            <a class="a_title" href="<%= ctxPath%>/people.yolo"><span class="title">구성원</span></a>
-	            <a class="current" href="<%= ctxPath%>/organization_chart.yolo"><span class="title">조직도</span></a>
+	            <a class="a_title" href="<%= ctxPath%>/people.pm"><span class="title">구성원</span></a>
+	            <a class="current" href="<%= ctxPath%>/organization_chart.pm"><span class="title">조직도</span></a>
 	            <c:if test="${sessionScope.loginuser.empno == 9999}">
-	            	<a class="a_title" href="<%= ctxPath%>/change_history.yolo"><span class="title">인사 정보 관리</span></a>
+	            	<a class="a_title" href="<%= ctxPath%>/change_history.pm"><span class="title">인사 정보 관리</span></a>
 	            </c:if>
 	        </div>
 	    </div>
@@ -144,7 +144,7 @@ function func_networkgraph(){
 	let dataArr = []; // 차트 출력하는 모든 데이터를 담는 배열 
 	
 	$.ajax({
-		  url:"<%= ctxPath %>/getDeptName.yolo",
+		  url:"<%= ctxPath %>/getDeptName.pm",
 		  // type:"POST",
 		  // data:{},
 		  dataType:"JSON",
@@ -158,7 +158,7 @@ function func_networkgraph(){
 				  dataArr.push(deptArr);           //[ [사장,부서1],[사장,부서2],[사장,부서3],[사장,부서4],[사장,부서5] ]
 				  
 				  $.ajax({
-					  url:"<%= ctxPath %>/getTeamName.yolo",
+					  url:"<%= ctxPath %>/getTeamName.pm",
 					  // type:"POST",
 					  data:{"deptno":dept.deptno},
 					  dataType:"JSON",
@@ -172,7 +172,7 @@ function func_networkgraph(){
 							  dataArr.push(teamArr);           //[ [개발부, 개발1팀],[개발부, 개발2팀] ]
 							  
 							  $.ajax({
-								  url:"<%= ctxPath %>/getEmployees.yolo",
+								  url:"<%= ctxPath %>/getEmployees.pm",
 								  // type:"POST",
 								  data:{"teamno":team.teamno},
 								  async : false,

@@ -112,7 +112,7 @@ button:hover {
 		<i class="bi bi-arrow-clockwise"></i> 이메일 다시 보내기 
 		</button>
 	</div>
-	<button type="button" class="goback" onclick="javascript:location.href='<%= request.getContextPath()%>/login.yolo'">
+	<button type="button" class="goback" onclick="javascript:location.href='<%= request.getContextPath()%>/login.pm'">
 		이전으로 돌아가기
 	</button>
 	

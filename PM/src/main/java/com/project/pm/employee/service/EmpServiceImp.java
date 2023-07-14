@@ -15,6 +15,8 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.project.pm.common.ExcelRead;
+import com.project.pm.common.ExcelReadOption;
 import com.project.pm.employee.model.EmpDAO;
 
 @Service
@@ -525,9 +527,31 @@ public class EmpServiceImp implements EmpService{
 	}
 
 	@Override
-	public void excelUpload(File destFile) {
-		// TODO Auto-generated method stub
-		
-	}
+    public void excelUpload(File destFile) {
+        
+        ExcelReadOption excelReadOption = new ExcelReadOption();
+        
+        //파일경로 추가
+        excelReadOption.setFilePath(destFile.getAbsolutePath());
+        
+        //추출할 컬럼명 추가
+        excelReadOption.setOutputColumns("A", "B", "C", "D", "E","F");
+        
+        //시작행
+        excelReadOption.setStartRow(2);
+        
+        List<Map<String, String>>excelContent  = ExcelRead.read(excelReadOption);
+        
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("excelContent", excelContent);
+        
+        System.out.println("확인용 : "+excelContent);
+        
+        try {
+            dao.insertExcel(paramMap);
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
